@@ -14,7 +14,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Technology(props) {
-  const { nodes, materials } = useGLTF('../../public/img/scene-transformed.glb')
+  const { nodes, materials } = useGLTF('/img/scene-transformed.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.defaultMaterial.geometry} material={materials.initialShadingGroup} />
@@ -22,4 +22,4 @@ export default function Technology(props) {
   )
 }
 
-useGLTF.preload('../../public/img/scene-transformed.glb')
+useGLTF.preload('/img/scene-transformed.glb')
